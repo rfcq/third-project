@@ -17,7 +17,8 @@ public class ClienteService {
 		this.clienteRepository.save(cliente);
 	}
 	
-	public void delete(Cliente cliente) throws ClassNotFoundException, SQLException {
-		this.clienteRepository.delete(cliente);
+	public void delete(Cliente user) throws ClassNotFoundException, SQLException {
+		Cliente id = null;
+		this.clienteRepository.delete(id);
 	}
 }

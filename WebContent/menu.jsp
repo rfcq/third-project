@@ -7,13 +7,13 @@
 <title>Bem-vindo à tela principal</title>
 </head>
 <style>
-	/*body {
+	body {
 		background: rgb(204,204,204);
-	}*/
+	}
 	
 </style>
 <body>
-	<div id="topics"><h1 id="topic-letter">O QUE VOCÊ DESEJA?</h1></div>
+	<div id="topics"><center><h1 id="topic-letter">O QUE VOCÊ DESEJA?</h1></center></div>
 	<center><table id="table1">
 	<tr><th><a href=index.jsp>Adicionar Usuário</a></th></tr>
 	<tr><th><a href=deletePerson.jsp>Deletar Usuário</a></th></tr>
