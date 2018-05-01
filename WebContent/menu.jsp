@@ -17,6 +17,7 @@
 	<center><table id="table1">
 	<tr><th><a href=index.jsp>Adicionar Usuário</a></th></tr>
 	<tr><th><a href=deletePerson.jsp>Deletar Usuário</a></th></tr>
+	<tr><th><a href=exibir.jsp>Exibir Usuários</a></th></tr>
 	</table></center>
 </body>
 </html>

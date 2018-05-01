@@ -1,6 +1,7 @@
 package br.com.iesp.projeto.service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import br.com.iesp.projeto.model.Cliente;
 import br.com.iesp.projeto.repository.ClienteRepository;
@@ -17,8 +18,15 @@ public class ClienteService {
 		this.clienteRepository.save(cliente);
 	}
 	
-	public void delete(Cliente user) throws ClassNotFoundException, SQLException {
-		Cliente id = null;
+	public Cliente delete(String id) throws ClassNotFoundException, SQLException {
+		
 		this.clienteRepository.delete(id);
+		return null;
 	}
+	
+	public List<Cliente> showInfo(){
+		return this.clienteRepository.showInfo();
+	}
+
+	
 }

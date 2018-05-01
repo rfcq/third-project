@@ -7,11 +7,11 @@
 <title>Credentials</title>
 </head>
 <body>
-	<center><form action="checker" method="POST">
+	<form action="checker" method="POST">
 		<center>Username: <input type="text" name="user"><br></center>
-		<center>Password: <input type="password" name="pwd"><br></center>
-		<input type="submit" value="Login">
-	</form></center>
+		<center>Password: <input type="password" name="pwd"></center>
+		<center><input type="submit" value="Login"></center>
+	</form>
 
 
 </body>

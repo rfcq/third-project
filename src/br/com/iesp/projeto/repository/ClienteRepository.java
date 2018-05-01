@@ -32,13 +32,15 @@ public class ClienteRepository {
 		
 	}
 	
-	public void delete (Cliente cliente) throws ClassNotFoundException, SQLException {
+	public void delete (String user) throws ClassNotFoundException, SQLException {
 		this.con = ConnectionFactory.getConnection();
+		String sql = "DELETE FROM users WHERE id=?";
 		
 		PreparedStatement stmt;
 		try {
-		stmt = con.prepareStatement("DELETE FROM users WHERE USERN = ?");
-		stmt.setInt(1, cliente.getId());
+		stmt = con.prepareStatement(sql);
+		int id = Integer.parseInt(user);
+		stmt.setInt(1, id);
 		stmt.execute();
 		con.close();
 		} catch(SQLException e) {
@@ -55,8 +57,8 @@ public class ClienteRepository {
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				Cliente c = new Cliente();
-				c.setUser(rs.getString(1));
-				c.setPasswd(rs.getString(2));
+				c.setUser(rs.getString("user"));
+				c.setPasswd(rs.getString("passwd"));
 				listCliente.add(c);
 			}
 			con.close();
@@ -65,4 +67,5 @@ public class ClienteRepository {
 		}
 		return listCliente;
 	}
+
 }
