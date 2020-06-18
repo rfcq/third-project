@@ -10,7 +10,7 @@ public class ConnectionFactory {
 		Class.forName("com.mysql.jdbc.Driver");
 		String url = "jdbc:mysql://localhost:3306/SIGNUP";
 		try {
-			return DriverManager.getConnection(url, "rfcq", "thedatabase2018");
+			return DriverManager.getConnection(url, "rfcq", "123Test!@");
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return null;
